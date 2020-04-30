@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Cadastro de título</title>
+
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/estilo.css">
+
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="#"> Sistema de gerenciamento de
+			títulos </a>
+	</nav>
+
+	<div id="palco">
+		<form id="fm_titulos" method="POST" action="/titulos">				
+			<div class="row">
+			
+				<div class="form-group col-md-10">
+					<label>Descrição *</label> <input name="descricao" id="descricao"
+						autofocus class="form-control" maxlength="80">
+				</div>
+
+				<div class="form-group col-md-2">
+					<label>Data do vencimento</label> <input name="dtvenc" id="dtvenc"
+						class="form-control">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group col-md-3">
+					<label>Valor</label> <input name="valor" id="valor"
+						class="form-control">
+				</div>
+
+				<div class="form-group col-md-3">
+					<label>Status</label> <select class="form-control" name="status"
+						id="status">
+						<option value="PENDENTE">Pendente</option>
+						<option value="PENDENTE">Recebido</option>
+					</select>
+				</div>
+
+				<div class="form-group col-md-6">
+					<label>Observações</label> <input name="obs" id="obs"
+						class="form-control" maxlength="80">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group col-md-12 text-right">
+					<button type="submit" id="salva_titulo" class="btn btn-success">
+						<i class="fa fa-check"></i> Gravar
+					</button>
+					<button type="submit" id="cancela_titulo" class="btn btn-danger">
+						<i class="fa fa-undo"></i> Cancelar
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>
